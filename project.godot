@@ -13,6 +13,7 @@ config_version=4
 config/name="Alien Invader"
 run/main_scene="res://scenes/game/splash.tscn"
 boot_splash/image="res://sprites/game/splash.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://sprites/game/icon.png"
 
 [input]
