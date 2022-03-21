@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/ships/ship_avenger.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ships/ship_avenger.png" type="Texture" id=2]
+[ext_resource path="res://scenes/bullets/bullet_avenger.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 11.0
+height = 56.0
+
+[node name="Ship_Avenger" type="Area2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+bullet_scene = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 4 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="fire_rate_timer" type="Timer" parent="."]
+wait_time = 0.7
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 42, 6 )
+
+[connection signal="timeout" from="fire_rate_timer" to="." method="_on_fire_rate_timer_timeout"]
