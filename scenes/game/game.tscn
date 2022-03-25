@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/game/game.gd" type="Script" id=1]
 [ext_resource path="res://sprites/stages/stage1.png" type="Texture" id=2]
 [ext_resource path="res://scenes/ships/ship_avenger.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/enemies/enemy_1.tscn" type="PackedScene" id=4]
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -19,3 +20,7 @@ scale = Vector2( 1.36, 1.25 )
 texture = ExtResource( 2 )
 
 [node name="Ship_Avenger" parent="." instance=ExtResource( 3 )]
+
+[node name="Enemy_dummy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 896, 320 )
+speed = 150

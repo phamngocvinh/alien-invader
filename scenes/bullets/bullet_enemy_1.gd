@@ -6,7 +6,7 @@ export var damage = 1
 
 func _physics_process(delta):
 	var velocity = Vector2.ZERO
-	velocity.x += 1
+	velocity.x -= 1
 	velocity = velocity.normalized()
 	position += velocity * speed * delta
 
