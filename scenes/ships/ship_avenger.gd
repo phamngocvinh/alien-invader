@@ -42,3 +42,9 @@ func _on_fire_rate_timer_timeout():
 	var bullet = bullet_scene.instance()
 	bullet.position = $Position2D.global_position
 	get_tree().get_root().add_child(bullet)
+
+
+
+func _on_Ship_Avenger_body_entered(body):
+	if body.is_in_group("enemy_1"):
+		hide()
