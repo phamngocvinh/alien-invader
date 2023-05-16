@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/game/game.gd" type="Script" id=1]
-[ext_resource path="res://sprites/stages/stage1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/stages/stage1.png" type="Texture2D" id=2]
 [ext_resource path="res://scenes/ships/ship_avenger.tscn" type="PackedScene" id=3]
 
 [node name="Node" type="Node"]
@@ -13,7 +13,7 @@ script = ExtResource( 1 )
 position = Vector2( 59, 28 )
 motion_mirroring = Vector2( 1088, 0 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 485, 272 )
 scale = Vector2( 1.36, 1.25 )
 texture = ExtResource( 2 )

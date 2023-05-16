@@ -1,9 +1,9 @@
 extends RigidBody2D
 
 
-export var speed = 400
-export var health = 100
-export(PackedScene) var bullet_scene
+@export var speed = 400
+@export var health = 100
+@export var bullet_scene: PackedScene
 
 func _physics_process(delta):
 	var velocity = Vector2.ZERO
@@ -21,6 +21,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_Timer_Firerate_timeout():
-	var bullet = bullet_scene.instance()
+	var bullet = bullet_scene.instantiate()
 	bullet.position = $Position2D_Fire.global_position
 	get_tree().get_root().add_child(bullet)

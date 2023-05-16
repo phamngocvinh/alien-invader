@@ -15,6 +15,6 @@ func _process(delta):
 
 
 func _on_timer_enemy_spawn_timeout():
-	var enemy = enemyScene.instance()
-	enemy.global_position = Vector2(game_screen.x, rand_range(10, game_screen.y - 10))
+	var enemy = enemyScene.instantiate()
+	enemy.global_position = Vector2(game_screen.x, randf_range(10, game_screen.y - 10))
 	get_tree().get_root().add_child(enemy)
