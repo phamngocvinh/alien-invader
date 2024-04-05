@@ -1,24 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dxap8buskkn18"]
 
-[ext_resource path="res://scenes/game/game.gd" type="Script" id=1]
-[ext_resource path="res://sprites/stages/stage1.png" type="Texture2D" id=2]
-[ext_resource path="res://scenes/ships/ship_avenger.tscn" type="PackedScene" id=3]
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b8cvmyg33nnnb" path="res://sprites/stages/stage1.png" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ships/ship_avenger.tscn" id="3"]
 
 [node name="Node" type="Node"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( 59, 28 )
-motion_mirroring = Vector2( 1088, 0 )
+position = Vector2(59, 28)
+motion_mirroring = Vector2(1088, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 485, 272 )
-scale = Vector2( 1.36, 1.25 )
-texture = ExtResource( 2 )
+position = Vector2(485, 272)
+scale = Vector2(1.36, 1.25)
+texture = ExtResource("2")
 
-[node name="Ship_Avenger" parent="." instance=ExtResource( 3 )]
+[node name="Ship_Avenger" parent="." instance=ExtResource("3")]
 
 [node name="timer_enemy_spawn" type="Timer" parent="."]
 
